@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TallerTechnologies.Infrastructure", "TallerTechnologies.Infrastructure\TallerTechnologies.Infrastructure.csproj", "{CC426991-98E8-496F-9AB2-D038C961313A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TallerTechnologies.Domain", "TallerTechnologies.Domain\TallerTechnologies.Domain.csproj", "{B81FAB4A-E487-432F-9928-FC85A2B82B93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TallerTechnologies.UI", "TallerTechnologies..UI\TallerTechnologies.UI.csproj", "{3CE057A2-C1FC-47EB-A517-BAB4EDA63265}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{03A910AE-438B-43AB-9011-E72780A397B1}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\ReadMe.txt = Scripts\ReadMe.txt
+		Scripts\Result.txt = Scripts\Result.txt
+		Scripts\SQL Assessment.sql = Scripts\SQL Assessment.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E918CCAE-0C91-46A1-A0AF-B812F3175A30}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\1 - Tables\1 - Customers.sql = Scripts\1 - Tables\1 - Customers.sql
+		Scripts\1 - Tables\2 - Orders.sql = Scripts\1 - Tables\2 - Orders.sql
+		Scripts\1 - Tables\3 - OrderDetails.sql = Scripts\1 - Tables\3 - OrderDetails.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tables", "Tables", "{BE8000D6-51CF-424E-BF32-B12E8FBF31D8}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\1 - Tables\1 - Customers.sql = Scripts\1 - Tables\1 - Customers.sql
+		Scripts\1 - Tables\2 - Orders.sql = Scripts\1 - Tables\2 - Orders.sql
+		Scripts\1 - Tables\3 - OrderDetails.sql = Scripts\1 - Tables\3 - OrderDetails.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Project", "Web Project", "{0A6B3B80-C7DE-4EE7-97BD-2C5CD6F5356B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{F6484B59-96BB-4DEE-81DE-51F64414355C}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC426991-98E8-496F-9AB2-D038C961313A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC426991-98E8-496F-9AB2-D038C961313A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC426991-98E8-496F-9AB2-D038C961313A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC426991-98E8-496F-9AB2-D038C961313A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81FAB4A-E487-432F-9928-FC85A2B82B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81FAB4A-E487-432F-9928-FC85A2B82B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81FAB4A-E487-432F-9928-FC85A2B82B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81FAB4A-E487-432F-9928-FC85A2B82B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE057A2-C1FC-47EB-A517-BAB4EDA63265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE057A2-C1FC-47EB-A517-BAB4EDA63265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE057A2-C1FC-47EB-A517-BAB4EDA63265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE057A2-C1FC-47EB-A517-BAB4EDA63265}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC426991-98E8-496F-9AB2-D038C961313A} = {0A6B3B80-C7DE-4EE7-97BD-2C5CD6F5356B}
+		{B81FAB4A-E487-432F-9928-FC85A2B82B93} = {0A6B3B80-C7DE-4EE7-97BD-2C5CD6F5356B}
+		{3CE057A2-C1FC-47EB-A517-BAB4EDA63265} = {0A6B3B80-C7DE-4EE7-97BD-2C5CD6F5356B}
+		{E918CCAE-0C91-46A1-A0AF-B812F3175A30} = {03A910AE-438B-43AB-9011-E72780A397B1}
+		{BE8000D6-51CF-424E-BF32-B12E8FBF31D8} = {03A910AE-438B-43AB-9011-E72780A397B1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B651FA1C-89B4-4955-ACD9-BF9200C51934}
+	EndGlobalSection
+EndGlobal

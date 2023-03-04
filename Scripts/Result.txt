@@ -1,0 +1,2 @@
+FullName	age	orderid	datecreated	PurchaseMethod	ProductNumber	ProductOrigin
+Reginauld Kinton	56	4	2021-10-01	Debit Card	63187-018	Portugal

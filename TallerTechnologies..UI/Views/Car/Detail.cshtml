@@ -1,0 +1,65 @@
+﻿@using TallerTechnologies.Domain.Models
+@model CarViewModel
+@{
+    ViewData["Title"] = "Car detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+@using (Html.BeginForm())
+{
+    <div class="card col-sm-6">
+        <div class="card-body">
+            <h5 class="card-title"><b>@(Model.Make + " " + Model.Model)</b></h5>
+            <p class="card-text">
+                <div class="container">
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Year: </b>
+                        </dt>
+                        <dd class="col">
+                            @Model.Year
+                        </dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Color: </b>
+                        </dt>
+                        <dd class="col">
+                            @Model.Color
+                        </dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Doors: </b>
+                        </dt>
+                        <dd class="col">
+                            @Model.Doors
+                        </dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Price: </b>
+                        </dt>
+                        <dd class="col">
+                            @Model.Price
+                        </dd>
+                    </dl>
+                </div>
+            </p>
+            <div>
+                <dl class="row">
+                    <dd class="col">
+                        <button type="submit" class="btn btn-primary w-100" asp-controller="Car" asp-action="Edit" asp-route-id="@Model.Id" formmethod="post">Edit</button>
+                    </dd>
+                    <dd class="col">
+                        <button type="submit" class="btn btn-primary w-100" asp-controller="Car" asp-action="Delete" asp-route-id="@Model.Id" formmethod="post" onclick="return confirm('Are you sure you want to delete car?')">Delete</button>
+                    </dd>
+                    <dd class="col">
+                        <button type="submit" class="btn btn-primary w-100" asp-controller="Car" asp-action="Index" formmethod="post">Cancel</button>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+}

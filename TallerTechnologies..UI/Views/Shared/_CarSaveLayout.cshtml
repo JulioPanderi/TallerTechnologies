@@ -1,0 +1,68 @@
+﻿@using TallerTechnologies.Domain.Models
+@model CarViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+@using (Html.BeginForm("Save", "Car", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.Id)
+    <div class="card col-sm-6">
+        <div class="card-body">
+            <p class="card-text">
+                <div class="container">
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Make: </b>
+                        </dt>
+                        <dd class="col">
+                            @Html.TextBoxFor(m => m.Make)
+                        </dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Model: </b>
+                        </dt>
+                        <dd class="col">
+                            @Html.TextBoxFor(m => m.Model)
+                        </dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Year: </b>
+                        </dt>
+                        <dd class="col">
+                            @Html.TextBoxFor(m => m.Year)
+                        </dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Color: </b>
+                        </dt>
+                        <dd class="col">
+                            @Html.TextBoxFor(m => m.Color)
+                        </dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Doors: </b>
+                        </dt>
+                        <dd class="col">
+                            @Html.TextBoxFor(m => m.Doors)
+                        </dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col">
+                            <b>Price: </b>
+                        </dt>
+                        <dd class="col">
+                            @Html.TextBoxFor(m => m.Price)
+                        </dd>
+                    </dl>
+                </div>
+            </p>
+            @RenderSection("sectionFooter", true)
+        </div>
+    </div>
+}

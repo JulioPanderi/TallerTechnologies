@@ -1,0 +1,90 @@
+﻿@using TallerTechnologies.Domain.Models
+@model List<CarViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+    var item = new CarViewModel();
+}
+@using (Html.BeginForm())
+{
+    <div class="text-center">
+        <h1 class="display-4">Taller Technologies</h1>
+        <br />
+        <br />
+        <div id="carouselDataDetail" class="carousel slide" data-ride="carousel" data-interval="0">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h5>
+                        Welcome to our web. Do you want to play a game? Each slide will show a car. Select one and try to guess the real price. Good luck.
+                    </h5>
+                    <img class="d-block w-100" src="/images/Lamborghini.jpg" alt="Introduction">
+                </div>
+                @for (int i = 0; i < Model.Count(); i++)
+                {
+                    <div class="carousel-item">
+                        <center>
+                            <div class="card col-sm-6">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>@(Model[i].Make + " " + Model[i].Model)</b></h5>
+                                    <p class="card-text">
+                                        <div class="container">
+                                            <dl class="row">
+                                                <dt class="col">
+                                                    <b>Year: </b>
+                                                </dt>
+                                                <dd class="col">
+                                                    @Model[i].Year
+                                                </dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col">
+                                                    <b>Color: </b>
+                                                </dt>
+                                                <dd class="col">
+                                                    @Model[i].Color
+                                                </dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col">
+                                                    <b>Doors: </b>
+                                                </dt>
+                                                <dd class="col">
+                                                    @Model[i].Doors
+                                                </dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col">
+                                                    <b>Price: </b>
+                                                </dt>
+                                                <dd class="col">
+                                                    @Html.TextBox("txtPrice" + @Model[i].Id.ToString())
+                                                </dd>
+                                            </dl>
+                                            <br>
+                                            <dl class="row">
+                                                <dd class="col">
+                                                    <button type="submit" class="btn btn-primary w-50" asp-controller="Home" asp-action="GamePlay" asp-route-price="$('#txtPrice'+ @Model[i].Id)" asp-route-id="@Model[i].Id" formmethod="post">Send price</button>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                }
+            </div>
+            <a class="carousel-control-prev" href="#carouselDataDetail" role="button" data-slide="prev">
+                <img src="/images/Previous32.png" />
+            </a>
+            <a class="carousel-control-next" href="#carouselDataDetail" role="button" data-slide="next">
+                <img src="/images/Next32.png" />
+            </a>
+        </div>
+
+        <br />
+        <br />
+        <h1 id="msgSucess" class="text-success">
+            @ViewData["SucessText"]
+        </h1>
+    </div>
+}
